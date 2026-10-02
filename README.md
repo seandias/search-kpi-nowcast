@@ -7,9 +7,9 @@ Companies report operating metrics (users, bookings) once a quarter, weeks after
 | Company | KPI | Quarters tested | Beats naive benchmark? | Takeaway |
 |---|---|---|---|---|
 | [Duolingo](companies/duolingo/README.md) | Daily active users | 7 | No (search-change model 4% worse) | Searches went flat after 2023 while users nearly tripled, pointing to retention-led growth. Q3 2026 call: about 62M DAUs. |
-| Airbnb | Nights and experiences booked | | | _Data in place, results pending._ |
+| [Airbnb](companies/airbnb/README.md) | Nights and experiences booked | 9 | Yes (search-change model 9% better, right direction 7 of 9 quarters) | Trips start with a search, so search tracks demand. Searches fell 12.6% YoY in Q3 2026; Q3 call: about 142M nights, a slowdown to roughly 6% growth. |
 
-`outputs/summary.md` holds the full comparison table, regenerated each run.
+The contrast is the interesting part: search works as a signal when a purchase starts with a search (travel), and fails for habit products people open directly (a daily learning app). `outputs/summary.md` holds the full comparison table, regenerated each run.
 
 New here? The [Duolingo walkthrough notebook](walkthrough_duolingo.ipynb) explains the whole method step by step, with charts, and renders right in the browser.
 

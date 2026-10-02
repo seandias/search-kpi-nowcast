@@ -1,0 +1,9 @@
+{
+  "name": "Airbnb",
+  "ticker": "ABNB",
+  "kpi_name": "Nights and experiences booked",
+  "kpi_short": "Nights booked",
+  "kpi_unit": "millions",
+  "search_term": "Airbnb",
+  "geo": ""
+}

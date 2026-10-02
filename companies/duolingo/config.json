@@ -1,0 +1,9 @@
+{
+  "name": "Duolingo",
+  "ticker": "DUOL",
+  "kpi_name": "Daily active users (DAUs)",
+  "kpi_short": "DAUs",
+  "kpi_unit": "millions",
+  "search_term": "Duolingo",
+  "geo": ""
+}

@@ -1,14 +1,14 @@
 # Duolingo (DUOL): search interest vs daily active users (daus)
 
-- Quarters with both series (YoY): 16 (2022Q3 to 2026Q2)
-- Correlation of YoY growth, search vs DAUs: 0.47
-- Out-of-sample quarters tested: 10
-- Mean absolute error, naive benchmark: 1.77M
-- Mean absolute error, search-change model: 1.57M (-11% vs benchmark)
-- Mean absolute error, search-level model: 5.58M (+215% vs benchmark)
-- Search-change model called acceleration vs deceleration correctly: 70% of quarters
-- Search-change model closer than the benchmark: 7 of 10 quarters
-- Search-change vs benchmark without its single best quarter: -7%
+- Quarters with both series (YoY): 17 (2022Q3 to 2026Q3)
+- Correlation of YoY growth, search vs DAUs: 0.53
+- Out-of-sample quarters tested: 11
+- Mean absolute error, naive benchmark: 1.86M
+- Mean absolute error, search-change model: 1.78M (-4% vs benchmark)
+- Mean absolute error, search-level model: 5.59M (+200% vs benchmark)
+- Search-change model called acceleration vs deceleration correctly: 64% of quarters
+- Search-change model closer than the benchmark: 7 of 11 quarters
+- Search-change vs benchmark without its single best quarter: -0%
 
 ## Walk-forward detail
 
@@ -24,10 +24,4 @@
 | 2025Q4    |     52.7 |    55   |           54.8 |          61.9 | 30.1%        | 35.8%       | 35.4%        | 52.9%       |
 | 2026Q1    |     56.5 |    60.6 |           59.9 |          68.8 | 21.2%        | 30.1%       | 28.6%        | 47.7%       |
 | 2026Q2    |     58.7 |    57.8 |           58.7 |          70   | 23.1%        | 21.2%       | 23.1%        | 46.7%       |
-
-## Nowcast for 2026Q3 (not yet reported)
-
-- Search interest YoY: -12.7%
-- Naive benchmark: 62.1M (23.1% YoY)
-- Search-change model: 61.1M (20.9% YoY)
-- Search-level model: 70.6M (39.7% YoY)
+| 2026Q3    |     64.9 |    62.1 |           61.1 |          70.6 | 28.5%        | 23.1%       | 20.9%        | 39.7%       |

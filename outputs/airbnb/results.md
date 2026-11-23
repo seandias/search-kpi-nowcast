@@ -1,14 +1,14 @@
 # Airbnb (ABNB): search interest vs nights and experiences booked
 
-- Quarters with both series (YoY): 19 (2021Q4 to 2026Q2)
-- Correlation of YoY growth, search vs Nights booked: 0.76
-- Out-of-sample quarters tested: 13
-- Mean absolute error, naive benchmark: 2.44M
-- Mean absolute error, search-change model: 2.19M (-10% vs benchmark)
-- Mean absolute error, search-level model: 6.06M (+149% vs benchmark)
-- Search-change model called acceleration vs deceleration correctly: 62% of quarters
-- Search-change model closer than the benchmark: 6 of 13 quarters
-- Search-change vs benchmark without its single best quarter: +5%
+- Quarters with both series (YoY): 20 (2021Q4 to 2026Q3)
+- Correlation of YoY growth, search vs Nights booked: 0.73
+- Out-of-sample quarters tested: 14
+- Mean absolute error, naive benchmark: 2.80M
+- Mean absolute error, search-change model: 3.07M (+9% vs benchmark)
+- Mean absolute error, search-level model: 7.14M (+155% vs benchmark)
+- Search-change model called acceleration vs deceleration correctly: 57% of quarters
+- Search-change model closer than the benchmark: 6 of 14 quarters
+- Search-change vs benchmark without its single best quarter: +25%
 
 ## Walk-forward detail
 
@@ -27,10 +27,4 @@
 | 2025Q4    |    121.9 |   120.8 |          122.3 |         130.8 | 9.8%         | 8.8%        | 10.2%        | 17.8%       |
 | 2026Q1    |    156.2 |   157.2 |          156   |         165.1 | 9.2%         | 9.8%        | 9.0%         | 15.4%       |
 | 2026Q2    |    148.3 |   146.7 |          145.6 |         151.9 | 10.3%        | 9.2%        | 8.4%         | 13.1%       |
-
-## Nowcast for 2026Q3 (not yet reported)
-
-- Search interest YoY: -11.7%
-- Naive benchmark: 147.4M (10.3% YoY)
-- Search-change model: 140.6M (5.2% YoY)
-- Search-level model: 133.8M (0.2% YoY)
+| 2026Q3    |    155   |   147.4 |          140.6 |         133.8 | 16.0%        | 10.3%       | 5.2%         | 0.2%        |

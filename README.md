@@ -6,10 +6,12 @@ Companies report operating metrics (users, bookings) once a quarter, weeks after
 
 | Company | KPI | Quarters tested | Search-change model vs benchmark | Closer than benchmark | Verdict | Takeaway |
 |---|---|---|---|---|---|---|
-| [Airbnb](companies/airbnb/README.md) | Nights booked | 13 | 10% better | 6 of 13 | Only on average | The edge rests on one quarter (Q1 2025); without it, search does 5% worse. Q3 2026 call: about 142M nights. |
-| [Duolingo](companies/duolingo/README.md) | Daily active users | 10 | 11% better | 7 of 10 | Yes, consistently | Small but steady edge (about 0.2M DAUs a quarter), though an earlier data version showed the opposite. Q3 2026 call: about 62M DAUs. |
+| [Airbnb](companies/airbnb/README.md) | Nights booked | 14 | 9% worse | 6 of 14 | No | The earlier edge rested on one quarter (Q1 2025), and the Q3 2026 miss erased it. Q3 2026 live test: called about 142M nights, actual 155.0M; the benchmark (147.4M) was closer. |
+| [Duolingo](companies/duolingo/README.md) | Daily active users | 11 | 4% better | 7 of 11 | Yes, consistently | Small edge in most quarters, but it shrank from 11% to 4% after Q3 2026 and is about even without its best quarter. Q3 2026 live test: called about 62M DAUs, actual 64.9M; the benchmark (62.1M) was closer. |
 
-**The honest summary: search gives at most a small, fragile edge for both companies.** An earlier version of this project found a clean contrast (search works for travel, fails for a habit app). Adding more data reversed it: Airbnb's edge turned out to depend on a single quarter, and Duolingo's result flipped from slightly worse to slightly better. That sensitivity is the main finding so far, and the reason the analysis now reports how consistent each edge is, not just its average. `outputs/summary.md` holds the full comparison table, regenerated each run.
+**The honest summary: search has not shown a useful edge for either company, and it failed its first live test.** Both Q3 2026 predictions were recorded in October, before the releases. Search interest was down about 12% YoY for both companies, so the search-change model forecast a slowdown for both. Instead both KPIs accelerated (Airbnb nights to 16% growth, Duolingo DAUs to 29%), and the naive benchmark (same growth as last quarter) was closer both times. Adding that quarter flipped Airbnb from "only on average" to "no" and cut Duolingo's edge from 11% to 4%.
+
+One possible reason, not a proven one: if more people now get answers from AI assistants instead of Google, search interest can fall without any drop in real demand, which would weaken this signal for every company. It is also a single quarter. Earlier versions of this project showed the same fragility from the other direction (an apparent travel-vs-habit-app contrast that more data reversed), so any one result here should be read with that in mind. `outputs/summary.md` holds the full comparison table, regenerated each run.
 
 New here? The [Duolingo walkthrough notebook](walkthrough_duolingo.ipynb) explains the whole method step by step, with charts. It was written on an earlier version of the data, so its numbers differ from the tables above.
 
@@ -59,7 +61,7 @@ Good candidates have a consumer-facing KPI that people plausibly search for, and
 
 ## Limitations
 
-- **Small samples.** Each company has 10 to 13 tested quarters. Treat results as directional, not as a trading model.
+- **Small samples.** Each company has 11 to 14 tested quarters. Treat results as directional, not as a trading model.
 - **Results are sensitive to the data.** Switching from 5 years of weekly search data to the full monthly history changed Duolingo's verdict. Any single result here should be read with that in mind.
 - **Searches are not customers.** Search interest mostly reflects discovery and buzz, not repeat usage.
 - **Google Trends is relative and sampled.** Values are scaled 0 to 100 within each download and can shift slightly between downloads. Google also changed how it collects Trends data from 1 January 2022, which may affect growth rates across that date.
